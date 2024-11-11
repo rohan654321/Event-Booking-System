@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/event-booking-system/static/css/main.ee13589b.css",
+    "main.js": "/event-booking-system/static/js/main.01f52aef.js",
+    "index.html": "/event-booking-system/index.html",
+    "main.ee13589b.css.map": "/event-booking-system/static/css/main.ee13589b.css.map",
+    "main.01f52aef.js.map": "/event-booking-system/static/js/main.01f52aef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee13589b.css",
+    "static/js/main.01f52aef.js"
+  ]
+}
