@@ -1,56 +1,79 @@
+/* Container Styling */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Search Input Styling */
+.event-list input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.event-list input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Dropdown (Category Selector) Styling */
+.event-list select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.event-list select:hover,
+.event-list select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Event Item Styling */
 .event-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px 0;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .event-item:hover {
-    transform: scale(1.02);
-  }
-  
-  .event-info {
-    flex: 1;
-  }
-  
-  .event-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #007bff;
-  }
-  
-  .event-info p {
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  .event-actions {
-    text-align: right;
-  }
-  
-  .event-actions a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .event-actions a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .event-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .event-actions {
-      text-align: left;
-      margin-top: 10px;
-    }
-  }
-  
+  width: 90%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for Buttons (optional, if present) */
+.event-item button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event-item button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.event-item button:active {
+  transform: scale(0.95);
+}

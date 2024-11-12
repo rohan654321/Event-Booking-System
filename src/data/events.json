@@ -17,6 +17,78 @@
       "date": "2024-11-20",
       "availableSeats": 3,
       "price": 50
+    },
+    {
+      "id": 3,
+      "title": "React Conference",
+      "description": "Learn about the latest in React.",
+      "category": "Technology",
+      "date": "2024-12-01",
+      "availableSeats": 5,
+      "price": 100
+    },
+    {
+      "id": 4,
+      "title": "Music Festival",
+      "description": "Join us for an unforgettable night of live music.",
+      "category": "Music",
+      "date": "2024-11-20",
+      "availableSeats": 3,
+      "price": 50
+    },
+    {
+      "id": 5,
+      "title": "React Conference",
+      "description": "Learn about the latest in React.",
+      "category": "Technology",
+      "date": "2024-12-01",
+      "availableSeats": 5,
+      "price": 100
+    },
+    {
+      "id": 6,
+      "title": "Music Festival",
+      "description": "Join us for an unforgettable night of live music.",
+      "category": "Music",
+      "date": "2024-11-20",
+      "availableSeats": 3,
+      "price": 50
+    },
+    {
+      "id": 6,
+      "title": "Music Festival",
+      "description": "Join us for an unforgettable night of live music.",
+      "category": "Music",
+      "date": "2024-11-20",
+      "availableSeats": 3,
+      "price": 50
+    },
+    {
+      "id": 6,
+      "title": "Music Festival",
+      "description": "Join us for an unforgettable night of live music.",
+      "category": "Music",
+      "date": "2024-11-20",
+      "availableSeats": 3,
+      "price": 50
+    },
+    {
+      "id": 6,
+      "title": "Music Festival",
+      "description": "Join us for an unforgettable night of live music.",
+      "category": "Music",
+      "date": "2024-11-20",
+      "availableSeats": 3,
+      "price": 50
+    },
+    {
+      "id": 6,
+      "title": "Music Festival",
+      "description": "Join us for an unforgettable night of live music.",
+      "category": "Music",
+      "date": "2024-11-20",
+      "availableSeats": 3,
+      "price": 50
     }
   ]
 

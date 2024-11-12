@@ -1,56 +1,87 @@
+/* Container Styling for Each Event Item */
 .event-item {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px 0;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 15px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Event Information Section */
+.event-info {
+  max-width: 70%;
+}
+
+.event-info h3 {
+  font-size: 22px;
+  margin: 0;
+  color: #333;
+}
+
+.event-info p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Category and Date Styling */
+.event-info p:nth-child(3),
+.event-info p:nth-child(4) {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Event Action Link Styling */
+.event-actions {
+  display: flex;
+  align-items: center;
+}
+
+.event-actions a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.event-actions a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.event-actions a:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .event-item:hover {
-    transform: scale(1.02);
-  }
-  
+
   .event-info {
-    flex: 1;
+    max-width: 100%;
+    margin-bottom: 15px;
   }
-  
-  .event-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #007bff;
-  }
-  
-  .event-info p {
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
+
   .event-actions {
-    text-align: right;
+    width: 100%;
+    justify-content: center;
   }
-  
-  .event-actions a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .event-actions a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .event-item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .event-actions {
-      text-align: left;
-      margin-top: 10px;
-    }
-  }
-  
+}

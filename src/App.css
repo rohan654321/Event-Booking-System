@@ -1,81 +1,158 @@
-/* App.css */
-
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML */
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Main Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Header Styling */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* Page Layout */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Grid Layout for Items */
+.item {
+  width: calc(25% - 20px);  /* 4 items per row */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 1024px) {
+  .item {
+    width: calc(33.33% - 20px);  /* 3 items per row */
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #343a40;
-    margin-bottom: 20px;
-  }
-  
-  input,
-  select {
-    margin: 10px 0;
-    padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 8px 16px;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-/* App.css - Additional Media Queries */
+}
 
 @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    input, select {
-      width: 100%;
-      margin: 5px 0;
-    }
-  
-    button {
-      width: 100%;
-    }
+  .item {
+    width: calc(50% - 20px);  /* 2 items per row */
   }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    input, select, button {
-      font-size: 0.9rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .item {
+    width: 100%;  /* 1 item per row */
   }
-    
+}
+
+/* Form and Button Styling (Login) */
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Prevent Page Scrolling */
+body {
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+.container {
+  overflow-y: auto;  /* Enable vertical scrolling only if needed */
+}
+
+/* Toast Notifications */
+.Toastify__toast-container {
+  top: 50px;
+}
+
+.Toastify__toast {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.Toastify__toast--success {
+  background-color: #28a745;
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545;
+}

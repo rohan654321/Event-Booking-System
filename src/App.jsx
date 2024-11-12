@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import EventDetail from './components/EventDetail.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
-import PrivateRoute from './components/PrivateRoute.jsx';
 import Home from './pages/Home.jsx';
+import EventDetail from './components/EventDetail.jsx';
 import Login from './pages/login';
+import PrivateRoute from './components/PrivateRoute.jsx'; 
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +18,6 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route path='/event-booking-system' element={<Home/>}/>
               <Route path="/" element={<Login />} />
               <Route element={<PrivateRoute />}>
                 <Route path="/home" element={<Home />} />

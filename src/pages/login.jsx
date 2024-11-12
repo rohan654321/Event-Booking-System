@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/login.css';
+import { toast } from 'react-toastify';
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -10,11 +11,11 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     if (username === 'admin' && password === '1234') {
-      alert('Login successful');
+      toast.success('Login successful');
       localStorage.setItem('isLoggedIn', 'true');
       navigate('/home');
     } else {
-      alert('Invalid credentials');
+      toast.error('Invalid credentials');
     }
   };
 
